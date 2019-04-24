@@ -35,7 +35,7 @@ title: "Documentation"
 * 自定义actions
 * 由很多数据类型 (boolean, number, rich text, 等) 组成的组件库.
 * 所见即所得的编辑器
-* 自定义仪表板, 菜单, 布局
+* 自定义数据面板, 菜单, 布局
 * 超级容易扩展和重写 (它就是 React 组件)
 * 高度定制化的接口
 * 能连接到任意后端
@@ -53,7 +53,7 @@ npm install react-admin
 
 ## 使用方法
 
-阅读 [指引](./Tutorial.html) 15分钟的介绍. 之后, 前往 [文档](./index.html), 或者 检出 [示例的源码](https://github.com/marmelab/react-admin/tree/master/examples/demo) 参考示例的使用方法.
+阅读 [指引](./Tutorial.html) 30分钟的介绍. 之后, 前往 [文档](./index.html), 或者 检出 [示例的源码](https://github.com/marmelab/react-admin/tree/master/examples/demo) 参考示例的使用方法.
 
 ## 小展身手
 
@@ -133,7 +133,7 @@ export const PostCreate = (props) => (
 
 当然可以.
 
-React-admin 使用一种适配器,近似一个叫 *数据提供器(Data Providers)* 的概念. 可以参考已有提供器来设计你的API, 或者你也能写自己的数据提供期来请求一个已有的API. 写一个自定义的数据提供期几个小时就能搞定.
+React-admin 使用一种适配器,近似一个叫 *数据提供器(Data Providers)* 的概念. 可以参考已有提供器来设计你的API, 或者你也能写自己的数据提供器来请求一个已有的API. 写一个自定义的数据提供器几个小时就能搞定.
 
 ![数据提供器架构图](./img/data-provider.png)
 

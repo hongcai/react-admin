@@ -1,19 +1,19 @@
 ---
 layout: default
-title: "Authorization"
+title: "授权(Authorization)"
 ---
 
-# Authorization
+# 授权(Authorization)
 
-Some applications may require to determine what level of access a particular authenticated user should have to secured resources. Since there are many different possible strategies (single role, multiple roles or rights, etc.), react-admin simply provides hooks to execute your own authorization code.
+一些应用会要求对特定资源区分不同用户的访问权限.正如有许多不同的策略(单用户, 多用户或者多权限, 等等), react-admin 简单提供了钩子来执行你的授权相关的代码.
 
-By default, a react-admin app doesn't require authorization. However, if needed, it will rely on the `authProvider` introduced in the [Authentication](./Authentication.md) section.
+默认,一个react-admin应用不需要授权. 然后,如果需要的话,会依赖`授权提供器(authProvider)` 在 [鉴权](./Authentication.html) 里有章节介绍.
 
-## Configuring the Auth Provider
+## 配置授权提供器
 
-A call to the `authProvider` with the `AUTH_GET_PERMISSIONS` type will be made each time a component requires to check the user's permissions.
+当一个组件需要检验用户的权限时,会调用 `授权提供器` 的 `查询授权权限(AUTH_GET_PERMISSIONS)` 类型查询.
 
-Following is an example where the `authProvider` stores the user's role upon authentication, and returns it when called for a permissions check:
+下面时一个例子: 当调用权限校验时,通过 `授权提供器` 验证过后,存储用户的角色, 并返回结果:
 
 {% raw %}
 ```jsx
@@ -62,9 +62,9 @@ export default (type, params) => {
 ```
 {% endraw %}
 
-## Restricting Access to Resources or Views
+## 限制对特定资源或者视图的访问权限
 
-It's possible to restrict access to resources or their views inside the `Admin` component. To do so, you must specify a function as the `Admin` only child. This function will be called with the permissions returned by the `authProvider`.
+ 在 `管理(Admin)` 组件里, 可以限制对特定资源或者视图的访问权限. 首先, 你要指定一个函数作为 `管理(Admin)` 的唯一子节点. 该函数会在查询 `授权提供起(authProvider)` 返回的允许权限时被调用.
 
 {% raw %}
 ```jsx
@@ -89,17 +89,17 @@ It's possible to restrict access to resources or their views inside the `Admin` 
 ```
 {% endraw %}
 
-Note that the function returns an array of React elements. This is required to avoid having to wrap them in a container element which would prevent the `Admin` from working.
+注意这个函数返回的是 React 元素的数组. 要避免把他们封装到容器元素, 否则 `管理(Admin)` 不生效.
 
-**Tip** Even if that's possible, be careful when completely excluding a resource (like with the `categories` resource in this example) as it will prevent you to reference them in the other resource views, too.
+**提示** 要留意当完全排除掉一个资源(像上面例子里的 `categories` 资源)时, 对其他资源视图也完全不可见.
 
-## Restricting Access to Fields and Inputs
+## 限制对特定字段和输入的访问控制
 
-You might want to display some fields or inputs only to users with specific permissions. Those permissions are retrieved for each route and will provided to your component as a `permissions` prop.
+你可能只想对部分有特殊权限用户展示一些字段或者输入. 这些权限可以通过每次路由获取到,并提供给你的组件作为 `权限(permissions)` 属性.
 
-Each route will call the `authProvider` with the `AUTH_GET_PERMISSIONS` type and some parameters including the current location and route parameters. It's up to you to return whatever you need to check inside your component such as the user's role, etc.
+每次路由都会调用 `授权提供器(authProvider)` 的 `查询授权权限(AUTH_GET_PERMISSIONS)` 类型的接口, 传入参数诸如当前的地址(location)和路由参数(route parameters). 由你决定返回什么在你的组件里检查, 比如用户角色, 等.
 
-Here's an example inside a `Create` view with a `SimpleForm` and a custom `Toolbar`:
+比如, 在 `新建(Create)` 视图里, 有一个 `简易表格(SimpleForm)` 和一个自定义 `菜单栏(Toolbar)`:
 
 {% raw %}
 ```jsx
@@ -133,9 +133,9 @@ export const UserCreate = ({ permissions, ...props }) =>
 ```
 {% endraw %}
 
-**Tip** Note how the `permissions` prop is passed down to the custom `toolbar` component.
+**提示** 注意 `权限(permissions)` 属性 是由自定义组件 `菜单栏(toolbar)` 传进来的.
 
-This also works inside an `Edition` view with a `TabbedForm`, and you can hide a `FormTab` completely:
+也可以用在 `编辑(Edition)` 视图里的 `页签表单(TabbedForm)`, 这样就能完全隐藏其中的某个 `表单页签(FormTab)`:
 
 {% raw %}
 ```jsx
@@ -155,7 +155,7 @@ export const UserEdit = ({ permissions, ...props }) =>
 ```
 {% endraw %}
 
-What about the `List` view, the `DataGrid`, `SimpleList` and `Filter` components? It works there, too.
+对 `列表(List)` 视图, `数据表格(DataGrid)`, `简易列表(SimpleList)` 和 `查询过滤器(Filter)` 组件也同样适用.
 
 {% raw %}
 ```jsx
@@ -198,11 +198,11 @@ export const UserList = ({ permissions, ...props }) =>
 ```
 {% endraw %}
 
-**Tip** Note how the `permissions` prop is passed down to the custom `filters` component.
+**提示** 留意 `权限(permissions)` 属性是如何传进自定义的 `查询过滤器(filters)` 组件.
 
-## Restricting Access to Content Inside a Dashboard
+## 限制对数据面板里特定内容的访问
 
-The component provided as a [`dashboard`]('./Admin.md#dashboard) will receive the permissions in its props too:
+[`数据面板(dashboard)`]('./Admin.md#dashboard) 组件也可以接收权限(permissions)属性:
 
 {% raw %}
 ```jsx
@@ -225,9 +225,9 @@ export default ({ permissions }) => (
 ```
 {% endraw %}
 
-## Restricting Access to Content Inside Custom Pages
+## 限制对自定义页面内容的访问
 
-You might want to check user permissions inside a [custom pages](./Admin.md#customroutes). You'll have to use the `WithPermissions` component for that. It will ensure the user is authenticated then call the `authProvider` with the `AUTH_GET_PERMISSIONS` type and the `authParams` you specify:
+你可以在[自定义页面](./Admin.md#customroutes)中校验用户权限. 要用到 `权限允许(WithPermissions)` 组件来完成. 会确保用户是鉴权过的, 并且调用 `授权提供器(authProvider)` 的 `查询授权权限(AUTH_GET_PERMISSIONS)` 类型和 `验证` It will ensure the user is authenticated then call the `authProvider` with the `AUTH_GET_PERMISSIONS` type and the `authParams` you specify:
 
 {% raw %}
 ```jsx
