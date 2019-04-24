@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "Labs"
+title: "实验室"
 ---
 
-# Labs
+# 实验室
 
-This section references some projects we're working which are not ready yet for production. They probably miss some features or are not handling all corner cases. Use them at your own risks. Besides, we would really appreciate some feedback!
+这个篇章参考了一些我们正在开发中的,尚未投入生产环境的项目. 他们可能缺失一些特性, 有些边界条件可能覆盖不全. 使用这些就要自己承担风险了. 同时, 我们也期待您的反馈!
 
 ## ra-tree
 
-![ra-tree demo](./img/ra-tree.gif)
+![ra-tree 例子](./img/ra-tree.gif)
 
-`ra-tree` is a set of components allowing to work with tree data. It is composed of two packages:
+`ra-tree` 是一套配合tree data(树形数据)的组件. 它由2个包组成:
 
-- `ra-tree-core`: The core components which only provides logic and no UI. Read more about it in its [README](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-core/README.md)
-- `ra-tree-ui-materialui`: Some UI components using the previous package and built with material-ui. Read more about it in its [README](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-ui-materialui/README.md)
+- `ra-tree-core`: 核心组件, 提供逻辑处理, 不涉及UI. [点击查看更多](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-core/README.md)
+- `ra-tree-ui-materialui`: 依赖上面的包,提供material-ui风格的UI组件,[点击查看更多](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-ui-materialui/README.md)
