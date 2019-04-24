@@ -227,7 +227,7 @@ export default ({ permissions }) => (
 
 ## 限制对自定义页面内容的访问
 
-你可以在[自定义页面](./Admin.md#customroutes)中校验用户权限. 要用到 `权限允许(WithPermissions)` 组件来完成. 会确保用户是鉴权过的, 并且调用 `授权提供器(authProvider)` 的 `查询授权权限(AUTH_GET_PERMISSIONS)` 类型和 `验证` It will ensure the user is authenticated then call the `authProvider` with the `AUTH_GET_PERMISSIONS` type and the `authParams` you specify:
+如果你要在[自定义页面](./Admin.md#customroutes)中校验用户权限. 可以用 `此条件下权限允许(WithPermissions)` 组件来实现功能. 它会确保用户是鉴权通过的, 并且调用 `授权提供器(authProvider)` 的 `查询授权权限(AUTH_GET_PERMISSIONS)` 类型和你指定的 `授权参数(authParams)`:
 
 {% raw %}
 ```jsx
@@ -276,9 +276,9 @@ export default [
 ```
 {% endraw %}
 
-## Restricting Access to Content in Custom Menu
+## 限制对自定义菜单的访问
 
-What if you want to check the permissions inside a [custom menu](./Admin.md#menu) ? Much like getting permissions inside a custom page, you'll have to use the `WithPermissions` component:
+假如你想要在[自定义菜单]中检查权限, 就像在自定义页面里查询权限一般, 你要用到 `此条件下权限允许(WithPermissions)` 组件来实现:
 
 {% raw %}
 ```jsx
