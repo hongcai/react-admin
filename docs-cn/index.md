@@ -139,7 +139,7 @@ React-admin 使用一种适配器,近似一个叫 *数据提供器(Data Provider
 
 详情请看 [数据提供器文档](./DataProviders.md) .
 
-## 自备全套工具,支持裁剪
+## 自备全套工具,可按需裁剪
 
 React-admin 设计为一个构建在[material-ui](http://www.material-ui.com/#/)之上的松耦合 React 组件库, 此外控制器函数是按照 Redux 的方式实现. 非常容易用你自己的替换掉一部分 react-admin 的功能, 比如: 用自定义的数据列表, GraphQL 代替 REST, 或者 bootstrap 代替 Material Design.
 
@@ -169,7 +169,7 @@ make doc
 make test
 ```
 
-如果你把 react-admin 作为一项依赖, 而且你想尝试修改react-admin, 建议这样处理:
+如果你把 react-admin 作为一项依赖, 并且你想尝试修改react-admin, 建议这样处理:
 
 ```sh
 # 在 myapp 里
