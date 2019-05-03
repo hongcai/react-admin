@@ -1,30 +1,30 @@
 ---
 layout: default
-title: "Ecosystem"
+title: "生态(Ecosystem)"
 ---
 
-# Ecosystem
+# 生态(Ecosystem)
 
-- [Inputs and Fields](#inputs-and-fields)
-- [Translations](#translations)
-- [Data Providers](#data-providers)
-- [Miscellaneous](#miscellaneous)
+- [输入和字段(Inputs and Fields)](#inputs-and-fields)
+- [翻译(Translations)](#translations)
+- [数据提供器(Data Providers)](#data-providers)
+- [杂项(Miscellaneous)](#miscellaneous)
 
-## Inputs and Fields
+## 表单输入框
 
-- [vascofg/react-admin-color-input](https://github.com/vascofg/react-admin-color-input): a color input using [React Color](http://casesandberg.github.io/react-color/), a collection of color pickers
-- [LoicMahieu/aor-tinymce-input](https://github.com/LoicMahieu/aor-tinymce-input): a TinyMCE component, useful for editing HTML
-- [vascofg/react-admin-date-inputs](https://github.com/vascofg/react-admin-date-inputs): a collection of Date Inputs, based on [material-ui-pickers](https://material-ui-pickers.firebaseapp.com/)
+- [vascofg/react-admin-color-input](https://github.com/vascofg/react-admin-color-input): 使用 [React Color](http://casesandberg.github.io/react-color/) 拾色器的颜色输入框
+- [LoicMahieu/aor-tinymce-input](https://github.com/LoicMahieu/aor-tinymce-input): 一个 TinyMCE 组件, 用于编辑所见即所得的 HTML
+- [vascofg/react-admin-date-inputs](https://github.com/vascofg/react-admin-date-inputs): 一套基于 [material-ui-pickers](https://material-ui-pickers.firebaseapp.com/) 的日期选择组件
 
-## Translations
+## 翻译
 
-See the [translation](./Translation.md#available-locales) page.
+详情请看 [翻译](./Translation.md#available-locales) page.
 
-## Authentication Providers
+## 验证提供器(Authentication Providers)
 
 * **[AWS Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/setting-up-the-javascript-sdk.html)**: [thedistance/ra-cognito](https://github.com/thedistance/ra-cognito)
 
-## Data Providers
+## 数据提供器(Data Providers)
 
 * **[Django Rest Framework](https://www.django-rest-framework.org/)**: [synaptic-cl/ra-data-drf](https://github.com/synaptic-cl/ra-data-drf)
 * **[Epilogue](https://github.com/dchester/epilogue)**: [dunghuynh/aor-epilogue-client](https://github.com/dunghuynh/aor-epilogue-client)
@@ -56,12 +56,12 @@ See the [translation](./Translation.md#available-locales) page.
 
 - [**Bootstrap**](https://getbootstrap.com/): [bootstrap-styled/react-admin](https://bootstrap-styled.github.io/react-admin)
 
-## Miscellaneous
+## 杂项
 
-- [marmelab/ra-realtime](https://github.com/marmelab/react-admin/tree/master/packages/ra-realtime): enable realtime updates
-- [marmelab/ra-tree-ui-materialui](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-ui-materialui/): Components to show data represented as a tree. This package is part of our [Labs](/Labs.md) experimentations. This means it misses some features and might not handle all corner cases. Use it at your own risks. Besides, we would really appreciate some feedback!
-- [marmelab/ra-tree-core](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-core/): Components providing the logic but no UI to show data represented as a tree. This package is part of our [Labs](/Labs.md) experimentations. This means it misses some features and might not handle all corner cases. Use it at your own risks. Besides, we would really appreciate some feedback!
-- [ra-customizable-datagrid](https://github.com/fizix-io/ra-customizable-datagrid): plugin that allows to hide / show columns dynamically.
-- [api-platform/admin](https://api-platform.com/docs/admin): create a fully featured admin using React Admin for API supporting the [Hydra Core Vocabulary](http://www.hydra-cg.com/), including but not limited to APIs created using the [API Platform framework](https://api-platform.com)
-- [zifnab87/ra-component-factory](https://github.com/zifnab87/ra-component-factory): centralized configuration of immutability/visibility of fields/menu-links/action buttons, easy re-ordering of fields/properties and tab reorganization based on permission roles
-- [ctbucha/bs-react-admin](https://github.com/ctbucha/bs-react-admin): [BuckleScript](https://bucklescript.github.io/) bindings for React Admin.
+- [marmelab/ra-realtime](https://github.com/marmelab/react-admin/tree/master/packages/ra-realtime): 开启实时更新
+- [marmelab/ra-tree-ui-materialui](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-ui-materialui/): 呈现树形数据的组件. 这个包是我们 [实验室](/Labs.md) 的一部分实验. 意味着它可能缺失一些特性, 有些边界条件可能覆盖不全. 如果使用就要自己承担风险了. 同时, 我们也期待您的反馈!
+- [marmelab/ra-tree-core](https://github.com/marmelab/react-admin/blob/master/packages/ra-tree-core/): 核心组件, 提供逻辑处理, 不涉及UI. 这个包是我们 [实验室](/Labs.md) 的一部分实验. 意味着它可能缺失一些特性, 有些边界条件可能覆盖不全. 如果使用就要自己承担风险了. 同时, 我们也期待您的反馈!
+- [ra-customizable-datagrid](https://github.com/fizix-io/ra-customizable-datagrid): 可用来动态隐藏/展示列数据的插件.
+- [api-platform/admin](https://api-platform.com/docs/admin): 建立一套完整特性的管理端, 用React Admin作为API支持[Hydra Core Vocabulary](http://www.hydra-cg.com/), 包括但不限于用[API Platform framework](https://api-platform.com)生成的 APIs
+- [zifnab87/ra-component-factory](https://github.com/zifnab87/ra-component-factory): 对 不可变的/可视化 的字段/菜单链接/行为按钮, 简单的字段/属性重排, 基于角色权限的页签标识, 的中央配置.
+- [ctbucha/bs-react-admin](https://github.com/ctbucha/bs-react-admin): [BuckleScript](https://bucklescript.github.io/) 绑定React Admin.
